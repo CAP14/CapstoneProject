@@ -1,0 +1,35 @@
+##############################################
+Welcome to BNK Global Banking Solutions!
+
+
+[L] : LOGIN
+[X] : Exit The System
+Enter Your Option:	
+l
+##############################################
+
+
+
+	LOGIN to BNK Global Banking Solutions
+Username:	merry
+Password:	christmas
+
+Logging in . . .
+Welcome merry!
+##############################################
+
+##############################################
+	GBS Money Transfer Service
+Enter the amount to transfer:	
+1000
+Receiver account number:	
+2345678901
+
+Sender account number:	
+1234567890
+##############################################
+##############################################
+
+Successfully transfered Php 1000.0 to Account: 2345678901!
+
+##############################################
