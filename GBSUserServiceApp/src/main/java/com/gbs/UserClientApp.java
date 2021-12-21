@@ -12,12 +12,14 @@ public class UserClientApp {
 	static String senderAccInfo, receiverAccInfo;
 	static float senderNewBal;
 	static float receiverNewBal;
+	static boolean correctLogin = false;
 	
 	public static void main(String args[]) {
 		login();
 	}
 	//method for login
 	public static void login() {
+		
 		RestTemplate userLoginRestTemplate = new RestTemplate();
 		final String restApiUrlString = "http://localhost:8081/ecz/user/userLoginResponse";
 		UserLoginResponse userLoginResponse = userLoginRestTemplate.getForObject(restApiUrlString,
@@ -55,10 +57,14 @@ public class UserClientApp {
 					if (passwordFoundString.equals(userPassword)) {
 
 						System.out.println("Welcome " + u.getUserName() + "!");
+						correctLogin = true;
+						loginCredentials(correctLogin);
 						break;
 
 					} else {
 						System.out.println("Incorrect Credentials!");
+						correctLogin = false;
+						loginCredentials(correctLogin);
 					}
 				}
 			}
@@ -111,5 +117,8 @@ public class UserClientApp {
 	}
 	public static void updateReceiverBalance() {
 		updateBalance(receiverAccInfo, receiverNewBal);
+	}
+	public static boolean loginCredentials(boolean correctCredentials) {
+		return correctCredentials;
 	}
 }
