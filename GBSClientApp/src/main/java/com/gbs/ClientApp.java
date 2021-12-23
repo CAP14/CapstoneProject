@@ -1,5 +1,8 @@
 package com.gbs;
 
+import com.gbs.service.AccountClientApp;
+import com.gbs.service.UserClientApp;
+
 public class ClientApp {
 	public static void main(String args[]) {
 		UserClientApp.login(); // calls user microservice
