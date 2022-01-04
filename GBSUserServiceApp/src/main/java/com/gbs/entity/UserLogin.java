@@ -11,10 +11,9 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "USERS")
 public class UserLogin {
-
+	
 	@Column(name = "USER_ID")
 	private Long userID;
-//	@Id
 	@Column(name = "USER_NAME")
 	private String userName;
 	@Column(name = "USER_PASSWORD")

@@ -1,11 +1,10 @@
 package com.gbs;
 
-import com.gbs.service.AccountClientApp;
-import com.gbs.service.UserClientApp;
-
 public class ClientApp {
 	public static void main(String args[]) {
-		UserClientApp.login(); // calls user microservice
+//		UserClientApp.login(); // calls user microservice
+		UserClientApp loggingIn = new UserClientApp();
+		loggingIn.login();
 		if (UserClientApp.correctLogin == true) {
 			AccountClientApp.transferProcedure(); // calls the account microservice
 			// update balance in users table

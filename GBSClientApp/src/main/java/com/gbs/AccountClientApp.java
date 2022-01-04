@@ -1,4 +1,4 @@
-package com.gbs.service;
+package com.gbs;
 
 import java.util.List;
 import java.util.Scanner;
@@ -30,7 +30,11 @@ public class AccountClientApp {
 		String fromAccString = scan.nextLine();
 		System.out.println("##############################################\n");
 		//calls the processDetails method
-		processDetails(fromAccString, toAccString, amount);
+		if(!toAccString.equals(fromAccString)) {
+			processDetails(fromAccString, toAccString, amount);
+		}else {
+			System.out.println("Account numbers cannot be the same!");
+		}
 		scan.close();
 		}
 		

@@ -1,4 +1,4 @@
-package com.gbs.service;
+package com.gbs;
 
 import java.util.List;
 import java.util.Scanner;
@@ -16,10 +16,10 @@ public class UserClientApp {
 	public static boolean correctLogin = false;
 	
 	public static void main(String args[]) {
-		login();
+//		login();
 	}
 	//method for login
-	public static void login() {
+	public  void login() {
 		
 		RestTemplate userLoginRestTemplate = new RestTemplate();
 		final String restApiUrlString = "http://localhost:8081/ecz/user/userLoginResponse";
